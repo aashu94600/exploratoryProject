@@ -18,6 +18,11 @@ def sentiScores(word):      #takes input as string, return bith +&- values
     values.append(word.neg_score())     #negative value
     return values
 
+def similarity(category[]):
+	
+
+	pass
+
 
 text = input()
 text = text.lower()
