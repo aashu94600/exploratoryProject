@@ -1,6 +1,7 @@
 import re
 import nltk
 from nltk.corpus import wordnet as wn
+from nltk.corpus import sentiwordnet as swn
 
 def tagger(sentence):
     text = sentence.split()
@@ -8,6 +9,14 @@ def tagger(sentence):
 
     print(taggedText)
     return taggedText
+
+
+def sentiScores(word):      #takes input as string, return bith +&- values
+    word = swn.senti_synset(word)[0]
+    values = []
+    values.append(word.pos_score())      #positive value
+    values.append(word.neg_score())     #negative value
+    return values
 
 
 text = input()
