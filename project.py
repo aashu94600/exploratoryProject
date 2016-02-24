@@ -18,7 +18,7 @@ def sentiScores(word):      #takes input as string, return bith +&- values
     values.append(word.neg_score())     #negative value
     return values
 
-def similarity(category[]):
+def similarity(category):
 	
 
 	pass
@@ -39,27 +39,26 @@ for i in range(len(Taggedtext)):
     match = re.match(r'VB*', old)
     if match:
         Taggedtext[i] = (Taggedtext[i][0],'VB')
-        listV.append(TaggedText[i][0]
+        listV.append(TaggedText[i][0])
         countV += 1
 #for noun
     match = re.match(r'NN*', old)
     if match:
         Taggedtext[i] = (Taggedtext[i][0],'NN')
         countN += 1
-        listN.append(TaggedText[i][0]
+        listN.append(TaggedText[i][0])
 #for adjectives
     match = re.match(r'JJ*', old)
     if match:
         Taggedtext[i] = (Taggedtext[i][0],'JJ')
         countA += 1
-        listA.append(TaggedText[i][0]
+        listA.append(TaggedText[i][0])
 #for adverb
     match = re.match(r'RB*', old)
     if match:
         Taggedtext[i] = (Taggedtext[i][0],'RB')
         countR += 1
-        listR.append(TaggedText[i][0]
+        listR.append(TaggedText[i][0])
 
 
 print(Taggedtext)
-
